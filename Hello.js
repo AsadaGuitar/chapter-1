@@ -63,9 +63,10 @@ for (var i = 0; i < $answers.length; i++) {
 			question_counter++;
 			change_text(question_counter);
 		} 
-		//最後の問題児、結果を表示
+		//最後の問題時、結果を表示
 		else {
 			$question.getElementsByTagName("h2")[0].textContent = "result";
+			//回答文の要素全体を削除し結果表示のレイアウトを設定
 			document.getElementById("answers-box").style.display = "none";
 			$result.style.display = "flex";
 			$result.getElementsByTagName("h3")[0].textContent = 
