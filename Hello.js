@@ -1,8 +1,7 @@
 //DOMを取得
 const $question = document.getElementById("question");
-const $answers_box = document.getElementById("answers-box");
-const $answers = document.getElementsByClassName("answer");
-const $result = document.getElementById("result");
+const $answers  = document.getElementsByClassName("answer");
+const $result   = document.getElementById("result");
 
 //問題文を定義
 const questions = [
@@ -25,7 +24,7 @@ const correct_index_list = [0, 1, 2, 3];
 
 //カウンター変数を定義
 var question_counter = 0;
-var correct_counter = 0;
+var correct_counter  = 0;
 
 
 /**
@@ -67,7 +66,7 @@ for (var i = 0; i < $answers.length; i++) {
 		//最後の問題児、結果を表示
 		else {
 			$question.getElementsByTagName("h2")[0].textContent = "result";
-			$answers_box.style.display = "none";
+			document.getElementById("answers-box").style.display = "none";
 			$result.style.display = "flex";
 			$result.getElementsByTagName("h3")[0].textContent = 
 				`Your result is ${correct_counter}/4 point.`;
