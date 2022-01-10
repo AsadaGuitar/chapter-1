@@ -69,7 +69,8 @@ for (var i = 0; i < $answers.length; i++) {
 			$question.getElementsByTagName("h2")[0].textContent = "result";
 			$answers_box.style.display = "none";
 			$result.style.display = "flex";
-			$result.getElementsByTagName("h3")[0].textContent = `Your result is ${correct_counter}/4 point.`;
+			$result.getElementsByTagName("h3")[0].textContent = 
+				`Your result is ${correct_counter}/4 point.`;
 		}
 	});
 }
