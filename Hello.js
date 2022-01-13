@@ -23,8 +23,8 @@ const answers_list = [
 const correct_index_list = [0, 1, 2, 3];
 
 //カウンター変数を定義
-var question_counter = 0;
-var correct_counter  = 0;
+let question_counter = 0;
+let correct_counter  = 0;
 
 
 /**
@@ -36,7 +36,7 @@ const change_text = function(n) {
 	//問題文を設定
 	$question.getElementsByTagName("h2")[0].textContent = questions[n];
 	//回答文を設定
-	for (var i = 0; i < $answers.length; i++) {
+	for (let i = 0; i < $answers.length; i++) {
 		$answers[i].getElementsByTagName("h3")[0].textContent = answers_list[n][i];
 	}
 }
@@ -46,12 +46,12 @@ const change_text = function(n) {
 change_text(question_counter);
 
 //回答選択時のイベントを定義
-for (var i = 0; i < $answers.length; i++) {
+for (let i = 0; i < $answers.length; i++) {
 	$answers[i].addEventListener("click", function(e) {
 		
 		//選択された要素が配列の何番目かを取得
 		const answer_collections = [].slice.call($answers);
-		var index = answer_collections.indexOf(e.target);
+		let index = answer_collections.indexOf(e.target);
 		
 		//正解時に正解数カウンターを加算
 		if (index == correct_index_list[question_counter]) {
