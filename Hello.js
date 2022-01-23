@@ -1,6 +1,7 @@
 //DOMを取得
 const $question = document.getElementById("question");
-const $answers  = document.getElementsByClassName("answer");
+const $answers_box = document.getElementById("answers-box");
+const $answers  = $answers_box.getElementsByTagName("span");
 const $result   = document.getElementById("result");
 
 //問題文を定義
@@ -59,7 +60,7 @@ for (let i = 0; i < $answers.length; i++) {
 		}
 		
 		//最後の問題時以外の場合問題文、回答文を表示
-		if(question_counter < 3) {
+		if(question_counter < questions.length -1) {
 			question_counter++;
 			change_text(question_counter);
 		} 
@@ -67,7 +68,7 @@ for (let i = 0; i < $answers.length; i++) {
 		else {
 			$question.getElementsByTagName("h2")[0].textContent = "result";
 			//回答文の要素全体を削除し結果表示のレイアウトを設定
-			document.getElementById("answers-box").style.display = "none";
+			$answers_box.style.display = "none";
 			$result.style.display = "flex";
 			$result.getElementsByTagName("h3")[0].textContent = 
 				`Your result is ${correct_counter}/4 point.`;

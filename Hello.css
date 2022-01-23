@@ -20,7 +20,7 @@
 	flex-wrap: wrap;
 }
 
-.answer{
+#answers-box > span {
 	width: 248px;
 	height: 118px;
 	display: flex;
