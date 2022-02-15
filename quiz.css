@@ -1,0 +1,51 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+}
+
+#question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    height: 20%;
+    border-radius: 1em;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#answers {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80%;
+}
+
+#answers > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+    width: 48%;
+    height: 46%;
+    list-style: none;
+    border-radius: 1em;
+    background-color: cadetblue;
+    color: whitesmoke;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#result {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    background-color: cadetblue;
+    color: whitesmoke;
+    font-family: 'Quicksand', sans-serif;
+}
