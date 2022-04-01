@@ -36,7 +36,7 @@ let correct_counter  = 0;
  * 機能　　　		問題文と回答のテキストを変更
  * 引数　　　		int n	クイズ番号
  */
-const change_text = (n) => {
+function change_text(n) {
 	//問題文を設定
 	$question.textContent = question_list[n].question;
 	//回答文を設定
@@ -77,5 +77,15 @@ for (let i = 0; i < $answers.children.length; i++) {
 			$result.textContent     =
 				`Your result is ${correct_counter}/${question_list.length} point.`;
 		}
+	});
+	$answers.children[i].addEventListener('mouseover', (e) => {
+		e.target.style.backgroundColor = 'whitesmoke';
+		e.target.style.color = 'cadetblue';
+		e.target.style.outline = '1px solid cadetblue';
+	});
+	$answers.children[i].addEventListener('mouseout', (e) => {
+		e.target.style.backgroundColor = 'cadetblue';
+		e.target.style.color = 'whitesmoke';
+		e.target.style.outline = '0';
 	});
 }

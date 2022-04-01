@@ -37,6 +37,7 @@
     background-color: cadetblue;
     color: whitesmoke;
     font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
 }
 
 #result {
