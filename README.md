@@ -13,6 +13,8 @@ const $answers  = document.getElementById("answers");
 const $result   = document.getElementById("result");
 ```
 
+af
+
 ### ②テキスト定義
 ・問題文、回答文、解答番号の値を持つ連想配列を問題の数、配列内で定義する。
 ```javascript
