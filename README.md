@@ -49,6 +49,8 @@ const question_list = [
 ];
 ```
 
+a
+
 ### ③テキストの変更
 ・取得したHTML要素のテキストを *question_list* 変数を参照し変更する。
 ```javascript
